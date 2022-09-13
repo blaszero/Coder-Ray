@@ -332,12 +332,12 @@ body {
 .container-galery {
    display: grid; 
     grid-template-columns: 25% 25% 25% 25%; 
-    grid-template-rows: 10% 10% 62.5% 10% 10%; 
+    grid-template-rows: 3% 10% 75% 10% 10%; 
     grid-template-areas: 
       "header header header header"
-      ". . . ."
       "main main main main"
-      ". . . ."
+      "main main main main"
+      "main main main main"
       "footer footer footer footer"; 
       width: 100%;
 
@@ -369,20 +369,35 @@ body {
 
 
 .main-galery {
-display: flex;
-justify-content: space-between;
+  display: grid; 
+  grid-template-columns: 25% 25% 25% 25%; 
+  grid-template-rows: 25% 25% 25% 25%; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "i1 i2 i3 i4"
+    "i5 i6 i7 i8"
+    "i9 i10 i11 i12"
+    "i13 i14 i15 i16"; 
 }
-
-.i {
-  display: block;
-  width: 100%;
-  height: 50%;
-
-}
-
+.i1 { grid-area: i1; }
+.i2 { grid-area: i2; }
+.i3 { grid-area: i3; }
+.i4 { grid-area: i4; }
+.i5 { grid-area: i5; }
+.i6 { grid-area: i6; }
+.i7 { grid-area: i7; }
+.i8 { grid-area: i8; }
+.i9 { grid-area: i9; }
+.i10 { grid-area: i10; }
+.i11 { grid-area: i11; }
+.i12 { grid-area: i12; }
+.i13 { grid-area: i13; }
+.i14 { grid-area: i14; }
+.i15 { grid-area: i15; }
+.i16 { grid-area: i16; }
 
 /*------------------RESPONSIVE----------------------*/
-
+/*Celular*/
 
 @media screen and (max-width: 520px) {
 
@@ -469,10 +484,37 @@ justify-content: space-between;
 }
 
 
+.container-galery {
+  display: grid; 
+  grid-template-columns: 100%; 
+  grid-template-rows: 28% 75% 10% 10% ; 
+  grid-template-areas: 
+    "header "
+    "main"
+    "main"
+    "footer "; 
+    width: 100%;
+
+}
+
+
+.main-galery {
+  display: grid; 
+  grid-template-columns: 25% 25%; 
+  grid-template-rows: repeat(4, 25%); 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "i1 i2 i9 i10" 
+    "i3 i4 i11 i12"
+    "i5 i6 i13 i14" 
+    "i7 i8 i15 i16"; 
+}
+
 
 
 }
 
+/*table*/
 @media (min-width: 768px) and (orientation: landscape) and (max-width:1024px) {  
   .header{
     display: flex;
@@ -555,5 +597,30 @@ justify-content: space-between;
   "img3 img4";
 }
 
+.container-galery {
+  display: grid; 
+  grid-template-columns: 100%; 
+  grid-template-rows: 28% 75% 10% 10% ; 
+  grid-template-areas: 
+    "header "
+    "main"
+    "main"
+    "footer "; 
+    width: 100%;
+
+}
+
+
+.main-galery {
+  display: grid; 
+  grid-template-columns: 25% 25%; 
+  grid-template-rows: repeat(4, 25%); 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "i1 i2 i9 i10" 
+    "i3 i4 i11 i12"
+    "i5 i6 i13 i14" 
+    "i7 i8 i15 i16"; 
+}
 
 }
